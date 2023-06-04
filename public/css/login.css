@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --principal: rgb(240, 130, 28);
+    --segunda: #ffbd66;
+    --terceira: rgba(255, 166, 0, 0.753);
+    --sombra: rgba(0, 0, 0, 0.164);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+div.msg-erro {
+    opacity: 0;
+    width: 50vw;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: rgba(214, 36, 36, 0.068);
+    color: gray;
+    text-align: center;
+}
+
+.active {
+    opacity: 1;
+}
+
+.msg-erro.active {
+    animation: error 2.5s;
+}
+
+@keyframes error {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -90px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+main.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 50vh;
+    min-height: 520px;
+    border-radius: 15px;
+    margin: auto;
+    box-shadow: 0px 1px 15px var(--sombra);
+    padding: 70px 40px 0 40px;
+}
+
+div.nota-boas-vindas {
+    color: gray;
+    font-weight: bold;
+    line-height: 1.6em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    color: lightgray;
+    padding-top: 0px;
+}
+
+input[id*="in-"] {
+    width: 100%;
+    margin-top: 40px;
+    padding: 8px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    caret-color: rgb(87, 87, 87);
+    font-size: .9em;
+    color: gray;
+}
+
+input[id*="in-"]:focus, select {
+    outline: 0;
+}
+
+input[id*="in-"].activo {
+    border-bottom: 2px solid var(--terceira);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    display: block;
+    padding: 10px 80px;
+    margin: 60px auto;
+    color: white;
+    background-color: var(--terceira);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(230, 175, 104);
+}
+
+input[type="submit"]:active {
+    background-color: rgb(172, 131, 77);
+}
+
+p {
+    color: gray;
+    text-align: center;
+}
+
+p > a {
+    color: rgba(255, 166, 0, 0.753);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre-se</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="nota">Preencha o formulário para se cadastrar</div>
+
+        <form>
+            <input type="text" name="name" id="in-nome" placeholder="Nome" required>
+            <input type="text" name="sobrenome" id="in-apelido" placeholder="Apelido" required>
+            <input type="email" name="email" id="in-email" placeholder="E-mail" required>
+            <input type="password" name="password" id="in-senha" placeholder="Senha" required>
+            <input type="password" name="confirma-senha" id="in-confirma-senha" placeholder="Confirme a senha" required>
+            <select name="access" id="nivel-acesso" required>
+                <option value="" selected>Selecione um nivel de acesso</option>
+                <option value="Pai">Pai</option>
+                <option value="Mãe">Mãe</option>
+                <option value="Filho">Filho</option>
+                <option value="Visitante">Visitante</option>
+            </select>
+
+            <input type="submit" value="Cadastrar-me">
+            <input type="button" value="Cancelar">
+        </form>
+    </main>
+
+    <script src="../js/registro.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --principal: rgb(240, 130, 28);
+    --segunda: #ffbd66;
+    --terceira: rgba(255, 166, 0, 0.753);
+    --sombra: rgba(0, 0, 0, 0.164);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    list-style: none;
+	text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 0px;
+}
+
+.container .painel {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    color: gray;
+    background-color: rgba(211, 211, 211, 0.219);
+    padding: 10px;
+}
+
+.painel .imagem {
+    display: block;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+}
+
+.painel .create-task {
+    display: block;
+    color: gray;
+    padding: 20px 0px;
+    margin-bottom: 45px;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.painel h3 {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.painel .menu {
+    margin: 5px 0 80px 0;
+}
+
+.painel .menu li {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--principal);
+    border-radius: 8px;
+}
+
+.painel button {
+    padding: 10px;
+    border: 1px solid var(--principal);
+    border-radius: 5px;
+    color: gray;
+    font-size: 1em;
+}
+
+.painel .create-task:hover {
+    background-color: rgba(211, 211, 211, 0.692);
+    color: rgb(146, 124, 124);
+}
+
+li:hover , button:hover {
+    background-color: var(--terceira);
+    cursor: pointer;
+}
+
+li:active, button:active {
+    background-color: var(--principal);
+}
+
+.container .corpo {
+    padding: 50px;
+    color: gray;
+}
+
+.corpo select {
+    margin-top: 8px;
+    padding: 5px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tabela {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    color: rgb(255, 255, 255);
+}
+
+.tabela .header-coluna {
+    color: white;
+	padding: 10px;
+    background-color: var(--segunda);
+}
+
+.tabela tbody td {
+    border: 1px solid #e9e7e7;
+	padding: 10px;
+    background-color: rgb(196, 195, 195);
+	color: white;
+    font-weight: bold;
+}
+
+.modal-container {
+    display: grid;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.164);
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 450px;
+    height: max-content;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.363);
+}
+
+.modal-show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal p {
+    text-align: right;
+}
+
+.modal-button {
+    padding: 8px 15px;
+    width: 45%;
+    color: gray;
+    margin: 10px 10px 10px 0px;
+    border: 0px solid;
+    border-radius: 15px;
+}
+
+.modal-button:hover {
+    box-shadow: 0px 0px 15px rgb(255, 166, 0);
+}
+
+.modal input[type="submit"] {
+    background-color: var(--segunda);
+    color: white;
+}
+
+.close-btn {
+    padding: 0px 5px;
+    width: 25px;
+    background-color: rgba(168, 21, 21, 0.568);
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+.close-btn:hover {
+    background-color: rgba(170, 21, 21, 0.445);
+    color: white;
+}
+
+.modal  input[id*="in-"], .modal select, .modal textarea {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+.modal textarea {
+    resize: vertical;
+    height: 50px;
+}
+
+.modal label {
+    display: block;
+    color: gray;
+    font-size: .95em;
+    margin-bottom: 2px;
+}
+
+:focus {
+    outline: 0;
+    border-color: #ffbd66;
+}
+
+.status {
+    display: block;
+    width: 100px;
+    padding: 6px 0px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.selected {
+    background-color: rgb(194, 192, 187);
+}
+
+.pendente {
+    background-color: rgb(0, 119, 255);
+}
+
+.concluída {
+    background-color: rgb(0, 223, 0);
+}

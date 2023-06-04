@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todas Tarefas</title>
+    <link rel="shortcut icon" href="../icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+    <main class="container">
+        <section class="painel">
+            <div class="imagem"><img src="../icon.png" alt="Logo" width="50px"></div>
+            <span class="create-task">Criar Tarefa</span>
+            <h3>Minhas tarefas</h3>
+            <ul class="menu">
+                <li>Geral</li>
+                <li>Concluídas</li>
+                <li>Pendentes</li>
+                <li>Actualizar Tarefas</li>
+            </ul>
+            <button class="button">Sair</button>
+        </section>
+        <section class="corpo">
+            <h2></h2>
+            <br>
+            <h3>Gerenciamento de tarefas</h3>
+            <br><br>
+            <div class="filtro">
+                <p>Filtrar por categoria</p>
+                <select name="categoria" id="categoria">
+                    <option value="" selected>Todas</option>
+                    <option value="Compras">Compras</option>
+                    <option value="Escolar">Escolar</option>
+                    <option value="Limpeza">Limpeza</option>
+                    <option value="Trabalho">Trabalho</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </div>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th class="header-coluna">Tarefa</th>
+                        <th class="header-coluna">Descrição</th>
+                        <th class="header-coluna">Data de Criação</th>
+                        <th class="header-coluna">Data de Vencimento</th>
+                        <th class="header-coluna">Responsável</th>
+                        <th class="header-coluna">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+        <section class="modal-container">
+            <div class="modal">
+                <p><span class="close-btn">&times;</span></p>
+                <div class="modal-content">
+                    <form>
+                        <label for="in-nome">Nome</label>
+                        <input type="text" name="nome" id="in-nome">
+                        <label for="in-descricao">Descrição</label>
+                        <textarea name="descricao" id="in-descricao"></textarea>
+                        <label for="in-categoria">Categoria</label>
+                        <select name="categoria" id="in-categoria">
+                            <option value="" selected>Selecione uma categoria</option>
+                            <option value="Compras">Compras</option>
+                            <option value="Escolar">Escolar</option>
+                            <option value="Limpeza">Limpeza</option>
+                            <option value="Trabalho">Trabalho</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                        <label for="in-data-criacao">Data de criação</label>
+                        <input type="date" name="data-criacao" id="in-data-criacao" disabled>
+                        <label for="in-data-vencimento">Data de vencimento</label>
+                        <input type="date" name="data-vencimento" id="in-data-vencimento">
+                        <label for="in-actor">Responsável</label>
+                        <select name="actor" id="in-actor">
+                            <option value="">Selecione um actor</option>
+                        </select>
+                        <input class="modal-button" type="submit" value="Criar">
+                        <input class="modal-button" type="reset" value="Limpar">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/home.js"></script>
+    <script>
+        check();
+        getUsers();
+    </script>
+</body>
+
+</html>
